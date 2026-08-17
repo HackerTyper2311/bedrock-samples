@@ -4,29 +4,17 @@
   "pause_button_background": {
     "type": "image",
     "texture": "textures/ui/custom_btn",
-    "size": [ "100%", "100%" ],
+    "size": [ "100%", 32 ],
     "uv_size": [ 32, 32 ],
     "tiled": "x",
-    "layer": -10
+    "layer": -2
   },
 
-  "pause_button_template": {
-    "type": "panel",
+  "pause_button_template@common_buttons.light_text_button": {
     "size": [ "100%", 32 ],
-    "controls": [
-      {
-        "background@pause.pause_button_background": {}
-      },
-      {
-        "button_text": {
-          "type": "label",
-          "text": "$button_text",
-          "anchor_from": "center",
-          "anchor_to": "center",
-          "size": [ "100%", "100%" ],
-          "layer": 1
-        }
-      }
-    ]
+    "focus_identifier": "$pressed_button_name",
+    "focus_change_right": "$focus_override_right",
+    "focus_change_left": "$pressed_button_name",
+    "$button_type_panel": "pause.pause_button_background"
   }
 }
