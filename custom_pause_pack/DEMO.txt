@@ -1,0 +1,1 @@
+Demo release marker. The build workflow packages this directory as a .mcpack and publishes a prerelease on the demo-pause-release branch.
