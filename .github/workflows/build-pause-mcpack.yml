@@ -1,0 +1,45 @@
+name: Build Custom Pause Button MCPack
+
+on:
+  push:
+    branches: [main, beta]
+  workflow_dispatch:
+
+permissions:
+  contents: write
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Build MCPack
+        run: |
+          mkdir -p build/custom_pause_pack
+          cp -r custom_pause_pack/. build/custom_pause_pack/
+          # Use the polished deepslate texture from the main resource pack.
+          mkdir -p build/custom_pause_pack/textures/ui
+          cp resource_pack/textures/blocks/deepslate/polished_deepslate.png build/custom_pause_pack/textures/ui/custom_btn.png
+          cp resource_pack/textures/blocks/deepslate/polished_deepslate.png build/custom_pause_pack/textures/ui/custom_btn_hover.png
+          cd build/custom_pause_pack
+          zip -r ../../Polished_Deepslate_UI.mcpack .
+
+      - name: Delete old releases and tags
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          gh release list --limit 100 --json tagName --jq '.[].tagName' | while read tag; do
+            gh release delete "$tag" --yes --cleanup-tag || true
+          done
+
+      - name: Create release
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          TAG="polished-deepslate-ui-${GITHUB_RUN_NUMBER}"
+          gh release create "$TAG" Polished_Deepslate_UI.mcpack \
+            --title "Polished Deepslate UI" \
+            --notes "Updated custom pause button using polished deepslate with dynamic horizontal tiling." \
+            --target "$GITHUB_SHA"
