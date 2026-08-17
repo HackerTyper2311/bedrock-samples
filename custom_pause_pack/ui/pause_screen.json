@@ -10,6 +10,8 @@
           "type": "image",
           "texture": "textures/ui/custom_btn",
           "size": [ "100%", "100%" ],
+          "uv_size": [ 16, 8 ],
+          "tiled": true,
           "layer": -2
         }
       },
@@ -18,6 +20,8 @@
           "type": "image",
           "texture": "textures/ui/custom_btn_hover",
           "size": [ "100%", "100%" ],
+          "uv_size": [ 16, 8 ],
+          "tiled": true,
           "layer": -1,
           "bindings": [
             {
