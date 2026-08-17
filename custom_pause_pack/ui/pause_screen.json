@@ -2,36 +2,12 @@
   "namespace": "pause",
 
   "pause_button_background": {
-    "type": "panel",
+    "type": "image",
+    "texture": "textures/ui/custom_btn",
     "size": [ "100%", "100%" ],
-    "controls": [
-      {
-        "deepslate_background": {
-          "type": "image",
-          "texture": "textures/ui/custom_btn",
-          "size": [ "100%", "100%" ],
-          "uv_size": [ 32, 32 ],
-          "tiled": "x",
-          "layer": -2
-        }
-      },
-      {
-        "hover_background": {
-          "type": "image",
-          "texture": "textures/ui/custom_btn_hover",
-          "size": [ "100%", "100%" ],
-          "uv_size": [ 32, 32 ],
-          "tiled": "x",
-          "layer": -1,
-          "bindings": [
-            {
-              "binding_name": "#is_hovered",
-              "binding_name_override": "#visible"
-            }
-          ]
-        }
-      }
-    ]
+    "uv_size": [ 32, 32 ],
+    "tiled": "x",
+    "layer": -2
   },
 
   "pause_button_template@common_buttons.light_text_button": {
