@@ -1,0 +1,40 @@
+{
+  "namespace": "pause",
+
+  "pause_button_background": {
+    "type": "panel",
+    "size": [ "100%", "100%" ],
+    "controls": [
+      {
+        "default_background": {
+          "type": "image",
+          "texture": "textures/ui/custom_btn",
+          "size": [ "100%", "100%" ],
+          "layer": -2
+        }
+      },
+      {
+        "hover_background": {
+          "type": "image",
+          "texture": "textures/ui/custom_btn_hover",
+          "size": [ "100%", "100%" ],
+          "layer": -1,
+          "bindings": [
+            {
+              "binding_name": "#is_hovered",
+              "binding_name_override": "#visible"
+            }
+          ]
+        }
+      }
+    ]
+  },
+
+  "pause_button_template@common_buttons.light_text_button": {
+    "size": [ "100%", 28 ],
+    "focus_identifier": "$pressed_button_name",
+    "focus_change_right": "$focus_override_right",
+    "focus_change_left": "$pressed_button_name",
+    "$button_type_panel": "pause.pause_button_background"
+  }
+}
