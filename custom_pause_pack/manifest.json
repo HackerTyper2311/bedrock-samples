@@ -1,17 +1,17 @@
 {
   "format_version": 2,
   "header": {
-    "name": "Custom Pause Buttons Demo",
-    "description": "Custom background and hover texture for Minecraft Bedrock pause buttons.",
+    "name": "Polished Deepslate UI",
+    "description": "Polished deepslate pause button backgrounds with vanilla Minecraft-rendered text.",
     "uuid": "b0d9f5c4-8c5d-4f17-9a4a-6a7d7b6e4d11",
-    "version": [1, 0, 0],
+    "version": [1, 0, 1],
     "min_engine_version": [1, 21, 0]
   },
   "modules": [
     {
       "type": "resources",
       "uuid": "6b3a1c89-2e4d-4a9c-8c7d-2e6f5b1a9c33",
-      "version": [1, 0, 0]
+      "version": [1, 0, 1]
     }
   ]
 }
