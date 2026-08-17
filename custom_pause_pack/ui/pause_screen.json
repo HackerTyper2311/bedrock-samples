@@ -10,7 +10,7 @@
           "type": "image",
           "texture": "textures/ui/custom_btn",
           "size": [ "100%", "100%" ],
-          "uv_size": [ 16, 32 ],
+          "uv_size": [ 16, 16 ],
           "tiled": "x",
           "layer": -2
         }
@@ -20,7 +20,7 @@
           "type": "image",
           "texture": "textures/ui/custom_btn_hover",
           "size": [ "100%", "100%" ],
-          "uv_size": [ 16, 32 ],
+          "uv_size": [ 16, 16 ],
           "tiled": "x",
           "layer": -1,
           "bindings": [
@@ -35,7 +35,7 @@
   },
 
   "pause_button_template@common_buttons.light_text_button": {
-    "size": [ "100%", 32 ],
+    "size": [ "100%", 16 ],
     "focus_identifier": "$pressed_button_name",
     "focus_change_right": "$focus_override_right",
     "focus_change_left": "$pressed_button_name",
