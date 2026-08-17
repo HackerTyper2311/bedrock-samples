@@ -17,6 +17,6 @@
     "focus_change_right": "$focus_override_right",
     "focus_change_left": "$pressed_button_name",
     "$button_type_panel": "pause.pause_button_background",
-    "$button_text_offset": [ 0, 0 ]
+    "$button_text_offset": [ 2, 0 ]
   }
 }
