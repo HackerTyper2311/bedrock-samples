@@ -4,10 +4,11 @@
   "pause_button_background": {
     "type": "image",
     "texture": "textures/ui/custom_btn",
-    "size": [ "100%", 32 ],
+    "size": [ "100% + 4px", "100% + 4px" ],
+    "offset": [ -2, -2 ],
     "uv_size": [ 32, 32 ],
     "tiled": "x",
-    "layer": -2
+    "layer": -10
   },
 
   "pause_button_template@common_buttons.light_text_button": {
