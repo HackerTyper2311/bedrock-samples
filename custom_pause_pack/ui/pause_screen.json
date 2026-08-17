@@ -7,14 +7,26 @@
     "size": [ "100%", "100%" ],
     "uv_size": [ 32, 32 ],
     "tiled": "x",
-    "layer": -2
+    "layer": -10
   },
 
-  "pause_button_template@common_buttons.light_text_button": {
+  "pause_button_template": {
+    "type": "panel",
     "size": [ "100%", 32 ],
-    "focus_identifier": "$pressed_button_name",
-    "focus_change_right": "$focus_override_right",
-    "focus_change_left": "$pressed_button_name",
-    "$button_type_panel": "pause.pause_button_background"
+    "controls": [
+      {
+        "background@pause.pause_button_background": {}
+      },
+      {
+        "button_text": {
+          "type": "label",
+          "text": "$button_text",
+          "anchor_from": "center",
+          "anchor_to": "center",
+          "size": [ "100%", "100%" ],
+          "layer": 1
+        }
+      }
+    ]
   }
 }
